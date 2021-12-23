@@ -1,18 +1,11 @@
 #!/usr/bin/python3
-""" 12-pascal_triangle: def pascal_triangle """
+'''Module for pascal_triangle method.'''
 
 
 def pascal_triangle(n):
-    """
-        returns a list of lists of integers
-        reps Pascal's triangle of n
-        Args:
-            n(int): to be repped
-    """
-    triangle = []
-    inner_list  = []
-    if not n <= 0:
-        for i in range(n):
-            innerlist.append(i + 1)
-            triangle.append(inner_list)
-    return triangle
+    '''Method that solves pascal's triangle.'''
+    rows = [[1 for j in range(i + 1)] for i in range(n)]
+    for n in range(n):
+        for i in range(n - 1):
+            rows[n][i + 1] = sum(rows[n - 1][i:i + 2])
+    return rows
