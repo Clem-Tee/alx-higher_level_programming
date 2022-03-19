@@ -1,3 +1,3 @@
 #!/bin/bash
-# catch as catch can
-curl -sL -X PUT -H "You got me!" -d "user_id=98" "0.0.0.0:5000/catch_me"
+# Catch me
+curl "0.0.0.0:5000/catch_me" -sLX PUT -H "Origin: School" -d "user_id=98"
